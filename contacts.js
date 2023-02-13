@@ -28,6 +28,7 @@ function removeContact(contactId) {
 
       contacts.splice(foundIndex, 1);
       fs.writeFile(contactsPath, JSON.stringify(contacts));
+      console.log(contacts);
     })
     .catch((err) => console.log(err.message));
 }
@@ -43,6 +44,7 @@ function addContact(name, email, phone) {
         phone: phone,
       });
       fs.writeFile(contactsPath, JSON.stringify(contacts));
+      console.log(contacts);
     })
     .catch((err) => console.log(err.message));
 }
